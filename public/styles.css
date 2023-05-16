@@ -1,0 +1,133 @@
+@font-face {
+  font-family: apple;
+  src: url(sfprodisplaymedium.otf);
+}
+
+a{
+  color: black;
+}
+body{
+  color: white;
+  font-family: apple;
+  background-image:url(cool.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  background-size: cover;
+
+}
+
+#navbtn{
+  color: black!important;
+}
+.navbar-toggler-icon{
+  color: black!important;
+  background: black;
+  border-radius: 50%;
+}
+
+#fixedC{
+  left:5%;
+  right:5%;
+  position: fixed;
+  opacity: 0.95;
+
+}
+nav{
+
+  position: fixed;
+  background-color: #fefffe;
+  font-family: apple;
+  font-size: 1.3rem;
+  width:90%;
+  border-radius:20px;
+
+  margin:20px auto;
+}
+
+.product{
+
+  width: 80%;
+  height: 650px!important;
+  margin:200px auto;
+  display: flex;
+  flex-direction: row;
+  /*box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+   */
+   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.image{
+
+  width: 50%;
+
+
+}
+
+.details{
+  background-color: white;
+  color: black;
+  padding:5%;
+  width: 50%;
+
+}
+
+.details h5{
+  text-decoration: underline;
+}
+.details h2 {
+  padding-bottom: 30px;
+}
+.loginForm{
+  width: 60%;
+  margin:100px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.loginForm input{
+   height: 50px;
+
+  width: 50%;
+  border-radius: 10px;
+  padding-left:10px;
+
+  margin-bottom: 20px;
+
+}
+.loginForm button{
+  height: 50px;
+  width: 20%;
+
+  border-radius: 10px;
+  border:none;
+  background-color: blue;
+  color: white;
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .product{
+
+    flex-direction: column;
+    height: 800px!important;
+
+
+  }
+  .image{
+   height: 40%;
+    width: 100%;
+  }
+  .details{
+    width: 100%;
+  }
+  .details h2 {
+    padding-bottom: 1px;
+  }
+
+}

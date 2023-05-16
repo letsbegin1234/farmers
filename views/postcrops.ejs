@@ -1,0 +1,60 @@
+<%-include("header")-%>
+<div class="container">
+    <h1>Your Products..</h1>
+</div>
+
+<div class="container">
+  <button style="margin:10px auto;" class="btn btn-primary" onclick="location.href='/logout'">Log Out</button>
+
+</div>
+
+<% for(let i=0;i<images.length;i++){ %>
+    <%   for(let j=0;j<images[i].products.length;j++){ %>
+
+           <div class="product">
+             <div class="image" style="background:url('data:image/<%=images[i].products[j].image.contentType%>;base64,<%=images[i].products[j].image.data.toString('base64')%>');background-position:center;background-size:cover;">
+
+             </div>
+             <div class="details">
+
+               <h5>Farmer Name</h5>
+               <h2><%=images[i].products[j].farmername%></h2>
+
+               <h5>Product Name</h5>
+               <h2><%=images[i].products[j].name%></h2>
+               <h5>Quantity Available(in Tons)</h5>
+
+               <h2><%=images[i].products[j].quantity%></h2>
+
+
+
+               <h5>Price(Rs/ton)</h5>
+               <h2><%=images[i].products[j].price%></h2>
+
+               <h5>Contact</h5>
+               <h2><%=images[i].products[j].mobileNum%></h2>
+
+             </div>
+
+           </div>
+
+
+    <%   } %>
+<%}%>
+
+<div class="container">
+    <h1>Post New Product..</h1>
+</div>
+<form action="/postcrops" class="loginForm" enctype="multipart/form-data" method="post">
+  <input type="text" name="farmername" placeholder="Farmer Name" required>
+    <input type="text" name="name" placeholder="Product Name" required>
+    <input type="text" name="quantity" placeholder="Quantity available(in Tons)" required>
+    
+    <input type="text" name="price" placeholder="Price per Ton" required>
+    <input type="text" name="mobileNum" placeholder="Contact Number" required>
+    <h2>Upload Your Product's Image</h2><input type="file" name="myImage" required>
+    <button type="submit">Post</button>
+</form>
+
+
+<%-include("footer")-%>

@@ -1,0 +1,38 @@
+<%- include("header") -%>
+<div class="product">
+    <div class="image" style="background:url('data:image/<%=images[i].products[j].image.contentType%>;base64,<%=images[i].products[j].image.data.toString('base64')%>');background-position:center;background-size:cover;">
+
+    </div>
+    <div class="details">
+
+      <h5>Farmer Name</h5>
+      <h2><%=images[i].products[j].farmername%></h2>
+
+      <h5>Product Name</h5>
+      <h2><%=images[i].products[j].name%></h2>
+      <h5>Quantity Available</h5>
+
+      <h2><%=images[i].products[j].quantity%></h2>
+
+
+
+      <h5>Price(Rs/ton)</h5>
+      <h2><%=images[i].products[j].price%></h2>
+      <h5>Contact</h5>
+      <h2><%=images[i].products[j].mobileNum%></h2>
+      
+
+    </div>
+
+  </div>
+
+
+  <form class="loginForm" action="/products" method="post">
+      <input type="text" placeholder="Name" name="name">
+      <input type="text" placeholder="Email" name="email">
+      <input type="text" placeholder="mobileNum" name="mobileNum">
+      <button type="submit">Send Details</button>
+
+  </form>
+
+<%- include("footer") -%>

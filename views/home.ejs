@@ -1,0 +1,55 @@
+<%- include('header') -%>
+<div class="container">
+
+<br>
+  <h1 style="font-size:3.5rem; font-weight:bold;">Connecting Farmers and Consumers.. Directly</h1>
+  <br><br>
+
+<br><br>
+
+<h1 style="font-size:3.5rem; font-weight:bold;">Products..</h1>
+<br><br>
+
+</div>
+
+
+<% for(let i=0;i<images.length;i++){ %>
+    <%   for(let j=0;j<images[i].products.length;j++){ %>
+
+           <div class="product">
+             <div class="image" style="background:url('data:image/<%=images[i].products[j].image.contentType%>;base64,<%=images[i].products[j].image.data.toString('base64')%>');background-position:center;background-size:cover;">
+
+             </div>
+             <div class="details">
+
+               <h5>Farmer Name</h5>
+               <h2><%=images[i].products[j].farmername%></h2>
+
+               <h5>Product Name</h5>
+               <h2><%=images[i].products[j].name%></h2>
+               <h5>Quantity Available(in Tons) </h5>
+
+               <h2><%=images[i].products[j].quantity%></h2>
+
+
+               
+               <h5>Price(Rs/ton)</h5>
+               <h2><%=images[i].products[j].price%></h2>
+               
+               <h5>Contact</h5>
+               <h2><%=images[i].products[j].mobileNum%></h2>
+               <button class="btn btn-primary" onclick="location.href='/products/<%=i%>/product/<%=j%>'">Order Now</button>
+               
+               
+
+             </div>
+
+           </div>
+
+
+    <%   } %>
+<%}%>
+
+
+
+<%- include('footer') -%>
